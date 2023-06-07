@@ -9,7 +9,9 @@
  *      see if there are any 2 numbers that add up to the target, then return their indices
  * 2) Uses cases:
  *      - return 2 indices for values that equal the target
- *  */
+ *  
+ * Pattern: Hashmap to store the diffs and compare to the target
+ */
 
 var twoSum = function(nums, target) {
     // take in nums array and target int

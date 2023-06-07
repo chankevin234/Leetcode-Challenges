@@ -41,7 +41,7 @@ var maxProfit = function(prices) {
     let maxProfit = 0;
     
     // create a sliding window of pointers 
-    // while the right pointer hasn't reached the end of the array
+    // while the right pointer hasn't reached the end of the array, loop
     while (rightPointer < prices.length) {
         // if the tempProfit > maxProfit, it becomes the new max
         let tempProfit = prices[rightPointer] - prices[leftPointer]; 

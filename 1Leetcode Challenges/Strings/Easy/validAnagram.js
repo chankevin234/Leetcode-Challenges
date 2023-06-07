@@ -12,7 +12,7 @@
  * 2) Use cases:
  *  - two strings --> have same letters, same order = true
  *  - two strings --> have same letters, diff order = true
- *  - two strings --> have number of letters = false
+ *  - two strings --> have diff number of letters = false
  *  - two strings --> same number of letters + diff number of frequencies = false     
  */
 var isAnagram = function(s, t) {

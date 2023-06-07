@@ -5,6 +5,8 @@
  * 2) Use cases:
  *  - 1 <= nums.length <= 104; -104 <= nums[i] <= 104; nums is sorted in non-decreasing order.
  * 
+ * Pattern: 2 Arrays 
+ * 
  * @param {number[]} nums
  * @return {number[]}
  */
