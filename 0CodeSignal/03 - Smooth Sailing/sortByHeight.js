@@ -16,7 +16,7 @@ function solution(a) {
     for(let i = 0; i < a.length; i++) {
         console.log(a[i]);
 
-        if(a[i] != -1) {
+            if(a[i] != -1) {
             a[i] = sfiltered.shift();
         }
 
