@@ -21,9 +21,43 @@
  *  - string manipulation
  */
 
+// star creating function1
+function stars(width) {
+    let stars = "";
+    for (let i = 0; i < width; i++) {
+        stars += "*";
+    }
+    return stars;
+}
+// side border creating function2
+function border(inputString) {
+    return "*" + inputString + "*";
+}
+
+// append values into array function3
 function solution(picture) {
     // determine the dimensions of the picture
-    // create width var = picture[0][j].length
-    // create height var = picture.length
+    // create width var = picture[0][j].length || determine new width (* + width + *)
+    let width = picture[0].length + 2;
+    // // create height var = picture.length || determine new height 
+    // let height = picture.length + 2;
 
+    // new pictureFramed 
+    let pictureFramed = [];
+
+    // create frames
+    let topFrame = console.log(stars(width));
+    let bottomFrame = console.log(stars(width));
+
+    // add sides of pic
+    for (let i = 0; i < picture.length; i++) {
+        pictureFramed[i] = border(picture[i]);
+    }
+
+    pictureFramed.unshift(topFrame);
+    pictureFramed.push(bottomFrame);
+
+    return pictureFramed;
 }
+let input = ["abc","ded"];
+console.log(solution(input));
