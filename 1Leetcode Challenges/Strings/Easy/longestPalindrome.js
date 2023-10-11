@@ -24,7 +24,7 @@ var longestPalindrome = function(s) {
     // create a map to store the frequency of characters
     let freqMap = new Map(); // if the map's frequency contains a value divisible by 2, it is a palindrome
     
-    // use a for each loop to go through each char in the string
+    // use for each loop to go through each char in the string
     for (let char of s) {
         let n = 0; // value to add to freq
         // if the value exists in the map
