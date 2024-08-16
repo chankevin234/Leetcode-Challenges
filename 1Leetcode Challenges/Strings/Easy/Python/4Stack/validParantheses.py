@@ -12,17 +12,33 @@
 3) Pattern: Stack
 '''
 
-def isValid(self, s: str) -> bool:
-    # create a stack arr
+def isValid(s):
+    # create a stack arr (will contain the open pair)
+    myStack = []
+    # create a map of the parantheses pairs
+    closeToOpen = {
+        "}": "{",
+        ")": "(",
+        "]": "[" 
+    }
 
     # loop thru the string
-        # if char = either {, (, or [, pop on
-
+    for char in s:
         # if char = ), }, ], pop off the last value in stack and check if it's the corresponding value
+        if (char == "}" or char == ")" or char == "]"):
+            if (myStack and (myStack[-1] == closeToOpen[char])):
+                myStack.pop()
+            else: 
+                return False
+        # if char = either {, (, or [, pop onto stack
+        else: 
+            myStack.append(char)
+        
+    # else True
+    if (not myStack):
+        return True
+    else: 
+        return False 
 
-        # at any point, you don't, return False
 
-        # else True
-    
-
-isValid("[]") # true
+print(isValid("[]")) # true
