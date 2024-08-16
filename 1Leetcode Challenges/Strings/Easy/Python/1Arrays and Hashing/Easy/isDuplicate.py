@@ -6,7 +6,7 @@ Example 1: Input: nums = [1, 2, 3, 3], Output: true
 '''
 
 def hasDuplicate(self, nums: List[int]) -> bool:
-    # instant set()
+    # create a set() --> only takes unique values
     mySet = set()
 
     # loop thru and add the nums into a set()

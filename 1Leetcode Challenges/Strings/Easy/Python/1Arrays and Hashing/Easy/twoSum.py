@@ -13,7 +13,7 @@ Explanation: nums[0] + nums[1] == 7, so we return [0, 1].
 '''
 
 def twoSum(self, nums: List[int], target: int) -> List[int]:
-    # create an dict of checked numbers + their pos to compare
+    # create an dict of checked numbers + their position to compare
     checkedNums = {}
     diff = nums[0]  # initial diff
 
