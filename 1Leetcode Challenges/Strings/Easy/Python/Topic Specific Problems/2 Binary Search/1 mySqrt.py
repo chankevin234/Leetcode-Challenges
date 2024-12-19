@@ -15,8 +15,21 @@ Explanation: The square root of 8 is 2.82842..., and since we round it down to t
 class Solution:
     '''BINARY SEARCH SOLUTION'''
     def mySqrt(self, x: int) -> int:
-        pass
-
+        '''EDGE CASE 1 - if x = 0, return 0'''
+        if x == 0:
+            return 0
+        
+        '''SOL HERE - Binary Search'''
+        first, last = 1, x
+        while first <= last:
+            mid = first + (last - first) // 2
+            if mid == x // mid:
+                return mid
+            elif mid > x // mid:
+                last = mid - 1
+            else:
+                first = mid + 1
+        return last
 
     '''BRUTE FORCE'''
     def mySqrtBrute(self, x: int) -> int:
